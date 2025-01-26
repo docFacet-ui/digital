@@ -1,0 +1,279 @@
+
+
+* {
+    margin: 0;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: yellowgreen;
+    margin: 0;
+    padding: 0;
+}
+
+.wholeContainer {
+    background-color: white;
+    /* background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
+    height: 100vh;
+    width: 100%;
+}
+
+.headerBar {
+    /* background-color: #007bff; */
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerContainer{
+    width: 95%;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.Contact > a {
+    font-size: larger;
+    color: aliceblue;
+    text-decoration: none;
+}
+.Contact > a:hover{
+    text-decoration: underline;
+}
+.LogoImage{
+    width: 150px;
+    mix-blend-mode: lighten;
+    filter: invert(100%);
+}
+.searchBar {
+    background-color: white;
+    /* padding: 5px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar>input {
+    /* padding: 10px; */
+    width: 300px;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.searchBar>i {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: #007bff;
+    border-radius: 0 5px 5px 0;
+    font-size: larger;
+    /* border: 1px solid #16C47F; */
+    border-left: 2px solid #007bff;
+}
+
+.searchBar>i:hover {
+    color: #0056b3;
+    cursor: pointer;
+    /* background-color: #96dbcf; */
+}
+
+.mainContainer {
+    /* background-color: rgb(232, 229, 229); */
+    /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    height: 91%;
+    padding: 10px;
+    width: 100%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.filesHandling {
+    background-color: #F0F0F0;
+    
+    height: 33vh;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+/* Hide the actual file input */
+.fileUpload input[type="file"] {
+    display: none;
+}
+
+/* Custom label for the file input */
+.fileUpload label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    /* background-color: #007bff; */
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+
+/* Add icon styling */
+.fileUpload label i {
+    margin-right: 8px;
+}
+
+/* Hover effect */
+.fileUpload label:hover {
+    background-color: #0056b3;
+}
+
+.allFiles {
+    /* background-color: white; */
+    /* height: 25vh; */
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto;
+}
+
+/* Hide the actual radio input */
+input[type="radio"].filesRadio {
+    display: none;
+}
+
+/* Style the label */
+.filesLabel {
+    background-color: white;
+    /* border-right: 5px solid #0057b3ab; */
+    height: 60px;
+    width: 350px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* margin-left: 10px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+}
+
+.filesLabel:hover {
+    /* background-color: #007bffa1; */
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    transition: 1s;
+}
+
+/* Custom radio button styling */
+.filesLabel::before {
+    content: "";
+    /* background-color: #007bff; */
+    border: 2px solid #007bff;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+/* Change color when the radio input is checked */
+input[type="radio"].filesRadio:checked+.filesLabel::before {
+    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    border: 2px solid white;
+    transition: 0.2s;
+}
+
+/* Change color when the radio input is checked */
+input[type="radio"].filesRadio:checked+.filesLabel {
+    /* background-color: #007bff; */
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    transition: 0.2s;
+    border: none;
+}
+
+.showFileValues {
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-radius: 10px;
+    height: 53vh;
+    /* border-top: 10px solid #0056b3; */
+    overflow-y: scroll;
+}
+
+.resultTable {
+    border-collapse: collapse;
+    width: 100%;
+    /* background-color: white; */
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+}
+
+.resultTable>tr,
+td {
+    padding: 10px;
+    background-color: white;
+}
+
+.resultTableHead {
+    padding: 10px;
+    color: white;
+}
+
+.noData {
+    color: red;
+    font-weight: lighter;
+}
+
+.noDataValue {
+    font-weight: bold;
+}
+
+.noDataMessage{
+    width: 24.8%;
+    mix-blend-mode: multiply;
+    margin:  auto;
+    opacity: 0.3;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: grey;
+    border: 1px solid black;
+    /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #F0F0F0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+}
